@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#box {
+  background-image: url(../images/bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content {
+  width: 90%;
+  margin: 0 auto;
+  font-family: simsun;
+}
+.content li {
+  list-style: none;
+  padding: 20px;
+  line-height: 20px;
+}
+.content #header {
+  height: 130px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.content #header .logo,
+.content #header .weather {
+  display: inline-block;
+}
+.content #header .logo {
+  width: 45%;
+  height: 86px;
+}
+.content #header .logo img {
+  width: 50%;
+}
+.content #header .weather {
+  width: 54%;
+  height: 30px;
+  text-align: right;
+  vertical-align: middle;
+}
+.content #header .weather .date {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  text-align: right;
+}
+.content .first,
+.content .second,
+.content .third {
+  margin-top: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.content .first .banqi {
+  background: rgba(255, 255, 255, 0.6);
+  width: 70%;
+  display: inline-block;
+  font-size: 25px;
+  padding: 20px 5px;
+}
+.content .first .banqi b {
+  display: inline-block;
+  width: 30%;
+}
+.content .first .qrtext {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 5%;
+  height: 250px;
+  color: #fff;
+  font-size: 1.7em;
+}
+.content .first #code {
+  border: 5px solid #fff;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+}
+.content .second {
+  font-size: 28px;
+  background-image: url(../images/tabbg2.png);
+  margin-top: 15px;
+}
+.content .second:before {
+  content: "";
+  display: table;
+}
+.content .second ul li {
+  border-left: 5px solid #DEC1C5;
+  margin-bottom: 5px;
+  font-size: 28px;
+  line-height: 28px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.content .second .time {
+  width: 20%;
+  margin-left: -5%;
+  text-align: center;
+  display: inline-block;
+}
+.content .second .kecheng {
+  width: 40%;
+  display: inline-block;
+  text-align: center;
+}
+.content .second .jiangshi {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+}
+.content .third {
+  font-size: 28px;
+  width: 100%;
+  color: #000;
+  background: rgba(255, 255, 255, 0.7);
+  margin-top: 15px;
+  line-height: 40px;
+}
+.content .third i {
+  font-style: normal;
+}
+.content .third span:first-child {
+  margin-left: 50px;
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 40px;
+  width: 300px;
+  text-align: left;
+}
+.content .third span:first-child b {
+  display: inline-block;
+  font-weight: 400;
+}
+.content .third span:last-child {
+  margin-left: 120px;
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: 100px;
+  display: inline-block;
+  line-height: 50px;
+}
+.content .third span:last-child b {
+  display: inline-block;
+  font-weight: 400;
+}
+.content .fouth {
+  margin-top: 30px;
+  background: #DEC1C5;
+  color: #000;
+  font-size: 28px;
+  line-height: 40px;
+}
+.content .fouth .issue_info {
+  margin-left: 50px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <title>移动管理学院课程系统</title>
+    <link rel="stylesheet" href="css/mobilCss.css"/>
+</head>
+<body id="box">
+    <div class="content">
+        <div id="find_no_record" align="left"></div>
+        <div id="header">
+            <div class="logo"><img src="images/logo.png"></div>
+            <div class="weather">
+                <!--<iframe name="weather_inc" id="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=5"  style="font-size: 20px" width="200" height="50" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" ></iframe>-->
+                <div class="date"></div>
+            </div>
+        </div>
+        <div class="first">
+            <div class="banqi">
+                <ul>
+                    <li><b>培训班名称：</b><span class="issue">--</span></li>
+                    <li><b>培训班期：</b><span class="issueTime">--</span></li>
+                    <li><b>主办单位：</b><span class="issueHost">--</span></li>
+                </ul>
+            </div>
+            <span class="qrtext">扫<br/>码<br/>签<br/>到</span>
+            <div id="code" style="height:205px;width:205px"></div>
+        </div>
+        <div class="second" style="position: relative; margin-top: -10px">
+            <div style="margin:0 auto; width: 100%; position: absolute;top: 25px;">
+                <b class="time">时间</b><b class="kecheng">课程</b><b class="jiangshi">讲师</b>
+            </div>
+            <ul style="margin-top: 90px ;height:300px;overflow-y: hidden" id="scrolldata"></ul>
+        </div>
+        <div class="third">
+            <span><b>班主任：</b><i class="issueTeacher">--</i></span>
+            <span><b>联系电话：</b><i class="issueTeacherTel">--</i></span>
+        </div>
+        <div class="fouth" style="position: relative;margin-top:10px">
+            <span style="position: absolute;top:0;left:0">学员须知：</span>
+            <marquee align="absmiddle" id="issueInfo" style="margin-left: 140px" scrollamount=3></marquee>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery.qrcode.min.js"></script>
+<script src="js/selfResponse.js"></script>
+<script src="js/mobile.js"></script>
+<script>
+
+    setTimeout(function(){
+        htmlobj=$.ajax({url:"XUZHI.txt",async:false});
+        $("#issueInfo").html(htmlobj.responseText);
+    },5000);
+
+</script>
+<script>
+
+window.onload=function(){
+        var _wrap=$("#scrolldata");//定义滚动区域
+        var _interval=5000;//定义滚动间隙时间
+        var _moving;//需要清除的动画
+
+            setInterval(function(){
+              //如果课程大于4节 6/23添加
+                if ($("#scrolldata>li").length > 4) {
+                    var _field = _wrap.find('li:first');//此变量不可放置于函数起始处,li:first取值是变化的
+                    var _h = _field.height() + 35;//取得每次滚动高度
+                    _field.animate({marginTop: -_h + 'px'}, 500, function () {//通过取负margin值,隐藏第一行
+                        _field.css('marginTop', 0);
+                        _field.appendTo(_wrap);//隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+                    })
+                }
+            }, _interval);
+            //滚动间隔时间取决于_interval
+        };
+
+
+
+
+
+
+
+</script>
+
+</html>

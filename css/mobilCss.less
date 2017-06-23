@@ -1,0 +1,165 @@
+*{margin:0;padding: 0;}
+@font20px:20px;
+@font25px:28px;
+
+
+#box{
+  background-image: url(../images/bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.content{
+  width:90%;
+  margin:0 auto;
+  font-family: simsun;
+  li{
+    list-style: none;
+    padding: 20px;
+    line-height: 20px;
+  }
+  #header{
+    height:130px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    .logo,.weather{display: inline-block;}
+    .logo{
+      width:45%;
+      height: 86px;
+      img{
+        width:50%;
+      }
+    }
+    .weather{
+      width:54%;
+      height:30px;
+      text-align: right;
+      vertical-align: middle;
+      .date{
+
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        color: #fff;
+        text-align: right;
+      }
+    }
+
+  }
+
+  .first,.second,.third{
+    margin-top:10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+  .first{
+    .banqi{
+      background:rgba(255,255,255,.6);
+      width: 70%;
+      display: inline-block;
+      font-size: 25px;
+      padding:20px 5px;
+      b{
+        display: inline-block;
+        width:30%;
+      }
+    }
+    .qrtext{
+      display: inline-block;
+      text-align: center;
+      vertical-align: top;
+      width: 5%;
+      height: 250px;
+      color: #fff;
+      font-size: 1.7em;
+    }
+    #code{
+      border:5px solid #fff;
+      display: inline-block;
+      vertical-align: top;
+      text-align: right;
+    }
+  }
+  .second{
+    &:before{
+      content: "";
+      display: table;
+    }
+    font-size: @font25px;
+    background-image:url(../images/tabbg2.png);
+    //background-size:1790px;
+    margin-top: 15px;
+    ul li{
+      border-left: 5px solid #DEC1C5;
+      margin-bottom: 5px;
+      font-size: @font25px;
+      line-height: @font25px;
+      background: rgba(0,0,0,.2);
+    }
+    .time{
+      width: 20%;
+      margin-left:-5%;
+      text-align: center;
+      display: inline-block;
+    }
+    .kecheng{
+      width: 40%;
+      display: inline-block;
+      text-align: center;
+    }
+    .jiangshi{
+      width: 30%;
+      display: inline-block;
+      text-align: center;
+    }
+
+  }
+  .third{
+    font-size: @font25px;
+    width: 100%;
+    color: #000;
+    background: rgba(255,255,255,.7);
+    margin-top: 15px;
+    line-height: 40px;
+    i{
+      font-style: normal;
+    }
+    span:first-child{
+      margin-left: 50px;
+      b{display: inline-block; font-weight: 400}
+      box-sizing: border-box;
+      display: inline-block;
+      line-height: 40px;
+      width:300px;
+      text-align: left;
+    }
+    span:last-child{
+      margin-left: 120px;
+      b{display: inline-block; font-weight: 400}
+      text-align: right;
+      box-sizing: border-box;
+      padding-right: 100px;
+      display: inline-block;
+      line-height: 50px;
+    }
+
+
+  }
+  .fouth{
+    margin-top: 30px;
+    .issue_info{
+
+      margin-left: 50px;
+    }
+
+    background: #DEC1C5;
+    color: #000;
+    font-size:@font25px;
+    line-height: 40px;
+  }
+
+}
+
+
